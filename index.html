@@ -3764,7 +3764,7 @@
             var email = document.getElementById("previewdiv" + i).getAttribute("email");
             $.ajax({
                 type: 'POST',
-                url: 'https://gpsigns.app/email/',
+                url: '/email/',
                 data: { 
                     'firstname': firstname,
                     'recipient': email,
