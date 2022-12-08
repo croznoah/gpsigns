@@ -3764,7 +3764,7 @@
             var email = document.getElementById("previewdiv" + i).getAttribute("email");
             $.ajax({
                 type: 'POST',
-                url: '/email/',
+                url: 'https://gpsigns.app/email/',
                 data: { 
                     'firstname': firstname,
                     'recipient': email,
@@ -3783,8 +3783,7 @@
                         rendersign(signstoretry[signstoretry.indexOf(i) + 1]);
                     }
                 },
-                error: function (response, status, error) {
-                    alert(response.statusCode);
+                error: function () {
                     errorhtml = errorhtml + "Sign #" + i + " - Unable to connect to server. Email not sent<br>";
                     failedsigns.push(i);
                     if (signstoretry.length == 0) {
